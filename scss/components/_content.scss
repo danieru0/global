@@ -63,6 +63,7 @@
         left: 0;
         display: flex;
         align-items: center;
+        z-index: 1;
 
         ul {
             padding: 0;
@@ -128,6 +129,28 @@
                         color: $white;
                     }
                 }
+            }
+        }
+    }
+
+    &__container {
+        width: 400px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .content__section {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+
+            &.active {
+                visibility: visible;
+                opacity: 1;
             }
         }
     }

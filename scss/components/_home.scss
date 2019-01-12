@@ -1,0 +1,21 @@
+.home {
+    width: 904px;
+    height: 580px;
+    margin-left: 100px;
+
+    &__header {
+        width: 100%;
+        height: 467px;
+        border-bottom: 1px solid #151515;
+        display: flex;
+        align-items: center;
+        background: url('../../imgs/spaceman.png') no-repeat right bottom;
+
+        h2 {
+            color: $white;
+            font-family: $font-mont;
+            font-size: 62px;
+            width: 400px;
+        }
+    }
+}
