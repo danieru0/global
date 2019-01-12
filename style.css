@@ -147,7 +147,8 @@
 .home {
   width: 904px;
   height: 580px;
-  margin-left: 100px; }
+  margin-left: 100px;
+  position: relative; }
   .home__header {
     width: 100%;
     height: 467px;
@@ -155,12 +156,81 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     background: url("../../imgs/spaceman.png") no-repeat right bottom; }
     .home__header h2 {
       color: #ffffff;
       font-family: "Montserrat";
       font-size: 62px;
       width: 400px; }
+    .home__header .home__btn {
+      width: 101px;
+      height: 31px;
+      background: #0f33ff;
+      border: none;
+      color: #ffffff;
+      font-family: "Montserrat";
+      font-weight: bold;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-bottom: 90px; }
+      .home__header .home__btn p {
+        margin: 0;
+        position: absolute;
+        left: -14px;
+        font-size: 14px; }
+      .home__header .home__btn span {
+        margin-left: 55px;
+        font-size: 25px; }
+    .home__header:after {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 6px;
+      background: #0f33ff;
+      position: absolute;
+      bottom: -7px;
+      left: 14px; }
+  .home__tabs {
+    width: 100%;
+    height: 19%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+    .home__tabs .tab:not(:nth-child(1)) {
+      margin-left: 60px; }
+    .home__tabs .tab {
+      color: #242424;
+      width: 245px;
+      font-family: "Montserrat";
+      cursor: pointer; }
+      .home__tabs .tab:hover {
+        color: #ffffff; }
+        .home__tabs .tab:hover p {
+          color: rgba(255, 255, 255, 0.9); }
+      .home__tabs .tab h3 {
+        text-transform: uppercase;
+        font-size: 16px;
+        letter-spacing: 1px; }
+      .home__tabs .tab p {
+        font-size: 14px;
+        color: #242424; }
