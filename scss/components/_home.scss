@@ -13,7 +13,7 @@
         align-items: flex-start;
         position: relative;
         flex-direction: column;
-        background: url('../../imgs/spaceman.png') no-repeat right bottom;
+        background: url('imgs/spaceman.png') no-repeat right bottom;
 
         h2 {
             color: $white;
@@ -35,17 +35,31 @@
             text-transform: uppercase;
             cursor: pointer;
             margin-bottom: 90px;
+            outline: none;
 
             p {
                 margin: 0;
                 position: absolute;
                 left: -14px;
                 font-size: 14px;
+                transition: 0.5s;
             }
 
             span {
                 margin-left: 55px;
                 font-size: 25px;
+                transition: 0.5s;
+            }
+
+            &:focus,
+            &:hover {
+                p {
+                    left: 18px;
+                }
+
+                span {
+                    margin-left: 84px;
+                }
             }
         }
 
@@ -89,9 +103,11 @@
                 text-transform: uppercase;
                 font-size: 16px;
                 letter-spacing: 1px;
+                transition: 0.3s;
             }
 
             p {
+                transition: 0.3s;
                 font-size: 14px;
                 color: #242424;
             }

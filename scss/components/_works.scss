@@ -1,0 +1,99 @@
+.works {
+    width: 1000px;
+    height: 574px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    h2 {
+        font-family: $font-mont;
+        color: $white;
+        margin-bottom: 60px;
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+
+    &__slider {
+        display: flex;
+        align-items: center;
+
+        .slider__content.hide {
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .slider__content {
+            display: flex;
+            transition: 0.3s;
+
+            .works__item.main {
+                img {
+                    width: 300px;
+                    height: 300px;
+                }
+
+                .work__title {
+                    color: $white;
+                    margin-top: 26px;
+                    font-size: 18px;
+                }
+
+                .work__description {
+                    visibility: visible;
+                }
+            }
+
+            .works__item {
+                color: $white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-family: $font-mont;
+
+                .work__title {
+                    color: #868686;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-top: 10px;
+                }
+
+                .work__description {
+                    text-align: center;
+                    line-height: 28px;
+                    font-size: 16px;
+                    margin-top: 5px;
+                    visibility: hidden;
+                }
+
+                img {
+                    width: 167px;
+                    height: 168px;
+                }
+            }
+        }
+    }
+
+    .slider__btn {
+        background: #282828;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        color: $white;
+        border-radius: 50%;
+        width: 54px;
+        flex-shrink: 0;
+        position: relative;
+        top: -50px;
+        height: 54px;
+        transition: 0.3s;
+
+        &:focus,
+        &:hover {
+            background: $white;
+            color: #282828;
+        }
+    }
+}
