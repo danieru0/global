@@ -1,0 +1,134 @@
+.about {
+    width: 864px;
+    height: 555px;
+    background: url('imgs/about-bg.png') no-repeat right;
+
+    &__header {
+        color: $white;
+        font-family: $font-mont;
+        font-size: 62px;
+        margin-top: 20px;
+        position: relative;
+        width: 400px;
+
+        &:after {
+            content: '';
+            width: 31px;
+            height: 31px;
+            display: block;
+            background: $blue;
+            border-radius: 50%;
+            position: absolute;
+            top: 61px;
+            left: 243.5px;
+        }
+
+        &:before {
+            content: '';
+            width: 9px;
+            height: 9px;
+            background: $blue;
+            display: block;
+            position: absolute;
+            bottom: 12.1px;
+            right: 159px;
+        }
+    }
+
+    &__btn {
+        background: transparent;
+        color: $white;
+        border: none;
+        font-family: $font-mont;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        letter-spacing: 1px;
+        transition: 0.2s ease-out;
+        outline: none;
+
+        &:after {
+            content: '';
+            border: 7px solid $blue;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            display: block;
+            position: absolute;
+            top: -5px;
+            left: 200px;
+            transform: rotate(-25deg);
+        }
+
+        &:before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: $blue;
+            display: block;
+            position: absolute;
+            top: 50px;
+            right: 450px;
+            transform: rotate(45deg);
+        }
+
+        &:focus,
+        &:hover {
+            margin-left: 15px;
+        }
+
+        span {
+            margin-left: 15px;
+        }
+    }
+
+    &__items {
+        margin-top: 50px;
+        display: flex;
+
+        .about__box:not(:first-of-type) {
+            margin-left: 30px;
+        }
+
+        .about__box {
+            width: 192px;
+            box-sizing: border-box;
+            position: relative;
+            text-decoration: none;
+            outline: none;
+            
+            &:focus,
+            &:hover {
+                img {
+                    transform: scale(1.02);
+                }
+
+                h3 {
+                    top: -11px;
+                }
+            }
+
+            img {
+                border: 11px solid $blue;
+                transform: scale(1);
+                transition: 0.2s;
+            }
+
+            h3 {
+                color: $white;
+                font-family: $font-mont;
+                font-weight: bold;
+                font-size: 14px;
+                margin: 0;
+                text-transform: uppercase;
+                position: relative;
+                top: -13px;
+                left: 20px;
+                transition: 0.2s;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
