@@ -1,3 +1,15 @@
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+  /* 1 */ }
+
 .content {
   width: 100%;
   height: 100vh;
@@ -503,3 +515,96 @@
         -o-transition: 0.2s;
         transition: 0.2s;
         letter-spacing: 1px; }
+
+.contact {
+  width: 950px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .contact__bg {
+    position: fixed;
+    background: url("imgs/contact.png") no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0; }
+  .contact__info {
+    width: 310px;
+    height: 375px;
+    background: #000000;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .contact__info p:first-of-type {
+      margin-top: 30px; }
+    .contact__info p:not(:first-of-type) {
+      margin-top: 25px; }
+    .contact__info p:last-of-type {
+      margin-bottom: 30px; }
+    .contact__info p {
+      color: #ffffff;
+      text-align: center;
+      font-family: "Montserrat";
+      font-weight: bold;
+      font-size: 15px;
+      margin: 0; }
+    .contact__info .contact__link {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      text-decoration: none; }
+    .contact__info .contact__link.behance {
+      width: 132px;
+      height: 42px;
+      border: none;
+      color: #ffffff;
+      background: #1769ff;
+      font-family: "Montserrat";
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: none; }
+    .contact__info .contact__link.dribbble {
+      width: 132px;
+      height: 42px;
+      border: none;
+      color: #ffffff;
+      background: #ea4c89;
+      font-family: "Montserrat";
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: none;
+      font-style: italic;
+      margin-top: 25px; }
+    .contact__info .contact__link.contact {
+      width: 132px;
+      height: 42px;
+      border: none;
+      color: #ffffff;
+      background: #0f33ff;
+      font-family: "Montserrat";
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: none;
+      letter-spacing: 1px;
+      margin-top: 25px; }

@@ -1,0 +1,11 @@
+@mixin contact-button($bgcolor, $weight, $text-transform) {
+    width: 132px;
+    height: 42px;
+    border: none;
+    color: $white;
+    background: $bgcolor;
+    font-family: $font-mont;
+    font-size: 14px;
+    font-weight: $weight;
+    text-transform: $text-transform;
+}

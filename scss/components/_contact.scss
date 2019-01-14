@@ -1,0 +1,70 @@
+.contact {
+    width: 950px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &__bg {
+        position: fixed;
+        background: url('imgs/contact.png') no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    &__info {
+        width: 310px;
+        height: 375px;
+        background: $black;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p:first-of-type {
+            margin-top: 30px;
+        }
+
+        p:not(:first-of-type) {
+            margin-top: 25px;
+        }
+
+        p:last-of-type {
+            margin-bottom: 30px;
+        }
+
+        p {
+            color: $white;
+            text-align: center;
+            font-family: $font-mont;
+            font-weight: bold;
+            font-size: 15px;
+            margin: 0;
+        }
+
+        .contact__link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .contact__link.behance {
+            @include contact-button(#1769ff, bold, none);
+        }
+
+        .contact__link.dribbble {
+            @include contact-button(#ea4c89, bold, none);
+            font-style: italic;
+            margin-top: 25px;
+        }
+
+        .contact__link.contact {
+            @include contact-button($blue, bold, none);
+            letter-spacing: 1px;
+            margin-top: 25px;
+        }
+    }
+}
