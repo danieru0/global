@@ -2,6 +2,7 @@
     let contentNav = document.getElementById('content__nav');
     let hireBtn = document.getElementById('hire-btn');
     let sections = document.getElementsByClassName('content__section');
+    let activePage = 0;
     let sliderBtnLeft = document.getElementById('work__btn-left');
     let sliderBtnRight = document.getElementById('work__btn-right');
     let sliderContent = document.getElementById('slider__content');
@@ -49,12 +50,53 @@
             let activeContentSection = document.querySelector('.content__section.active');
             activeContentSection.classList.remove('active');
             activeContentNav.classList.remove('active');
+            activePage = parseInt(e.target.parentNode.id);
             e.target.parentNode.classList.add('active');
             sections[e.target.parentNode.id].classList.add('active');
             if (e.target.parentNode.id >= 1) {
                 hireBtn.classList.add('active');
             } else {
                 hireBtn.classList.remove('active');
+            }
+        }
+    });
+
+    function changePageOnScroll(direction) {
+        let activeContentNav = document.querySelector('.content__item.active');
+        let activeContentSection = document.querySelector('.content__section.active');
+        let allContentNav = document.querySelectorAll('.content__item');
+        let allContentSection = document.querySelectorAll('.content__section');
+        switch(direction) {
+            case 'up':
+                activeContentSection.classList.remove('active');
+                activeContentNav.classList.remove('active');
+                activePage -= 1;
+                if (activePage < 0) {
+                    activePage = 4;
+                }
+                allContentNav[activePage].classList.add('active');
+                allContentSection[activePage].classList.add('active');
+                break;
+            case 'down':
+                activeContentSection.classList.remove('active');
+                activeContentNav.classList.remove('active');
+                activePage += 1;
+                if (activePage > 4) {
+                    activePage = 0;
+                }
+                allContentNav[activePage].classList.add('active');
+                allContentSection[activePage].classList.add('active');
+                break;
+            default: break;
+        }
+    }
+
+    document.addEventListener('wheel', (e) => {
+        if (!navActive) {
+            if (e.deltaY > 0 ) {
+                changePageOnScroll('down');
+            } else {
+                changePageOnScroll('up');
             }
         }
     });
