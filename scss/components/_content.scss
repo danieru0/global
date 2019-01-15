@@ -223,3 +223,18 @@
         }
     }
 }
+
+@media (max-width: 1170px) {
+    .content {
+        .wrapper {
+            width: auto;
+            margin: 0;
+    
+            .content__section {
+                margin: auto 0;
+            }
+        }
+    }
+}
+
+//825px

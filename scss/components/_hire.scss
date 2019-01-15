@@ -147,3 +147,33 @@
         }
     }
 }
+
+@media (max-width: 864px) {
+    .hire {
+        .hire__checkboxes {
+            height: auto;
+        }
+        .hire__row {
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0;
+            .hire__checkbox-container {
+                margin: 0;
+                margin-top: 30px;
+            }
+        }
+
+        .hire__form {
+            .hire__inputs {
+                flex-direction: column;
+                margin-left: -200px;
+                .hire__input-container {
+                    width: 100px;
+                    margin: 0;
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

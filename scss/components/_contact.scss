@@ -68,3 +68,14 @@
         }
     }
 }
+
+@media (max-width: 1170px) {
+    .contact {
+        width: auto;
+        overflow: hidden;
+        
+        .contact__info {
+            margin-right: 15px;
+        }
+    }
+}
