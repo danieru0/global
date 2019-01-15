@@ -6,6 +6,11 @@
     let sliderBtnRight = document.getElementById('work__btn-right');
     let sliderContent = document.getElementById('slider__content');
     let sliderClicked = false;
+    let navBtn = document.getElementById('nav-btn');
+    let perspective = document.getElementById('perspective');
+    let main = document.getElementById('main');
+    let navActive = false;
+    let navCloseBtn = document.getElementById('nav-close');
 
     function hashSectionChange() {
         if (document.querySelector('.content__section.active')) {
@@ -14,8 +19,12 @@
         if (document.querySelector('.content__item.active')) {
             document.querySelector('.content__item.active').classList.remove('active');
         }
+        if (document.querySelector('.nav__link a.active')) {
+            document.querySelector('.nav__link a.active').classList.remove('active');
+        }
         document.querySelector(`.content__section.${location.hash.substring(1)}`).classList.add('active');
         document.querySelectorAll(`.content__nav a[href='${location.hash}']`)[0].parentNode.classList.add('active');
+        document.querySelectorAll(`.nav__link a[href='${location.hash}']`)[0].classList.add('active');
         if (document.querySelectorAll(`.content__nav a[href='${location.hash}']`)[0].parentNode.id >= 1) {
             hireBtn.classList.add('active');
         } else {
@@ -81,6 +90,34 @@
     sliderBtnRight.addEventListener('click', () => {
         if (!sliderClicked) {
             workSlider('right');
+        }
+    });
+
+    navBtn.addEventListener('click', () => {
+        perspective.classList.add('active');
+        main.classList.add('active');
+        setTimeout(() => {
+            navActive = true;
+        }, 300);
+    });
+
+    navCloseBtn.addEventListener('click', () => {
+        if (navActive) {
+            main.classList.remove('active');
+            setTimeout(() => {
+                perspective.classList.remove('active');
+                navActive = false;
+            }, 300);
+        }
+    })
+
+    main.addEventListener('click', () => {
+        if (navActive) {
+            main.classList.remove('active');
+            setTimeout(() => {
+                perspective.classList.remove('active');
+                navActive = false;
+            }, 300);
         }
     });
 })();

@@ -12,204 +12,224 @@
     <title>Document</title>
 </head>
 <body>
-    <main class="content">
-        <div class="wrapper">
-            <header class="content__header">
-                <a href="/" class="header__logo">
+    <div id="perspective" class="perspective">
+        <nav class="navbar">
+            <div class="navbar__top">
+                <a href="/" class="navbar__logo">
                     <img alt="" src="imgs/logo.png">
-                     <h1>Global</h1>
+                    <p>Global</p>
                 </a>
-                <a id="hire-btn" href="#hire" class="header__hire-btn">hire us</a>
-                <button class="header__hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <button id="nav-close" class="navbar__close">
+                    <span class="fa fa-times"></span>
                 </button>
-            </header>
-            <div class="content__nav">
-                <ul id="content__nav">
-                    <li id="0" class="content__item">
-                        <a href="#home">Home</a>
-                        <a class="nav__number" href="#home">01</a>
-                    </li>
-                    <li id="1" class="content__item">
-                        <a href="#works">Works</a>
-                        <a class="nav__number" href="#works">02</a>
-                    </li>
-                    <li id="2" class="content__item">
-                        <a href="#about">About</a>
-                        <a class="nav__number" href="#about">03</a>
-                    </li>
-                    <li id="3" class="content__item">
-                        <a href="#contact">Contact</a>
-                        <a class="nav__number" href="#contact">04</a>
-                    </li>
-                    <li id="4" class="content__item">
-                        <a href="#hire">Hire us</a>
-                        <a class="nav__number" href="#hire">05</a>
-                    </li>
-                </ul>
             </div>
-            <div class="content__container">
-                <section class="content__section home">
-                    <div class="home__header">
-                        <h2>Your next interactive experience</h2>
-                        <button class="home__btn">
-                            <p>hire us</p>
-                            <span class="fa fa-long-arrow-alt-right"></span>
-                        </button>
-                    </div>
-                    <div class="home__tabs">
-                        <div class="tab">
-                            <h3>Metiew & Smith</h3>
-                            <p>Lorem ispum dolor sit amet, consectetur adipisicing elit, sed do</p>
+            <ul>
+                <li class="nav__link"><a href="#home">Home</a></li>
+                <li class="nav__link"><a href="#works">Works</a></li>
+                <li class="nav__link"><a href="#about">About</a></li>
+                <li class="nav__link"><a href="#contact">Contact</a></li>
+                <li class="nav__link"><a href="#hire">Hire us</a></li>
+            </ul>
+        </nav>
+        <main id="main" class="content">
+            <div class="wrapper">
+                <header class="content__header">
+                    <a href="/" class="header__logo">
+                        <img alt="" src="imgs/logo.png">
+                        <h1>Global</h1>
+                    </a>
+                    <a id="hire-btn" href="#hire" class="header__hire-btn">hire us</a>
+                    <button id="nav-btn" class="header__hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </header>
+                <div class="content__nav">
+                    <ul id="content__nav">
+                        <li id="0" class="content__item">
+                            <a href="#home">Home</a>
+                            <a class="nav__number" href="#home">01</a>
+                        </li>
+                        <li id="1" class="content__item">
+                            <a href="#works">Works</a>
+                            <a class="nav__number" href="#works">02</a>
+                        </li>
+                        <li id="2" class="content__item">
+                            <a href="#about">About</a>
+                            <a class="nav__number" href="#about">03</a>
+                        </li>
+                        <li id="3" class="content__item">
+                            <a href="#contact">Contact</a>
+                            <a class="nav__number" href="#contact">04</a>
+                        </li>
+                        <li id="4" class="content__item">
+                            <a href="#hire">Hire us</a>
+                            <a class="nav__number" href="#hire">05</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content__container">
+                    <section class="content__section home">
+                        <div class="home__header">
+                            <h2>Your next interactive experience</h2>
+                            <button class="home__btn">
+                                <p>hire us</p>
+                                <span class="fa fa-long-arrow-alt-right"></span>
+                            </button>
                         </div>
-                        <div class="tab">
-                            <h3>Fantasy interactive</h3>
-                            <p>Lorem ispum dolor sit amet, consectetur adipisicing elit, sed do</p>
-                        </div>
-                        <div class="tab">
-                            <h3>Paul & Shark</h3>
-                            <p>Lorem ispum dolor sit amet, consectetur adipisicing elit, sed do</p>
-                        </div>
-                    </div>
-                </section>
-                <section class="content__section works">
-                    <h2>Selected work</h2>
-                    <div class="works__slider">
-                        <button id="work__btn-left" class="slider__btn">
-                            <span class="fa fa-arrow-left"></span>
-                        </button>
-                        <div id="slider__content" class="slider__content">
-                            <div class="works__item">
-                                <img src="imgs/victory.png">
-                                <h3 class="work__title">Victory</h3>
-                                <p class="work__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+                        <div class="home__tabs">
+                            <div class="tab">
+                                <h3>Metiew & Smith</h3>
+                                <p>Lorem ispum dolor sit amet, consectetur adipisicing elit, sed do</p>
                             </div>
-                            <div class="works__item main">
-                                <img src="imgs/metiew.png">
-                                <h3 class="work__title">Metiew & Smith</h3>
-                                <p class="work__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+                            <div class="tab">
+                                <h3>Fantasy interactive</h3>
+                                <p>Lorem ispum dolor sit amet, consectetur adipisicing elit, sed do</p>
                             </div>
-                            <div class="works__item">
-                                <img src="imgs/nowak.png">
-                                <h3 class="work__title">Alex Nowak</h3>
-                                <p class="work__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+                            <div class="tab">
+                                <h3>Paul & Shark</h3>
+                                <p>Lorem ispum dolor sit amet, consectetur adipisicing elit, sed do</p>
                             </div>
                         </div>
-                        <button id="work__btn-right" class="slider__btn">
+                    </section>
+                    <section class="content__section works">
+                        <h2>Selected work</h2>
+                        <div class="works__slider">
+                            <button id="work__btn-left" class="slider__btn">
+                                <span class="fa fa-arrow-left"></span>
+                            </button>
+                            <div id="slider__content" class="slider__content">
+                                <div class="works__item">
+                                    <img src="imgs/victory.png">
+                                    <h3 class="work__title">Victory</h3>
+                                    <p class="work__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+                                </div>
+                                <div class="works__item main">
+                                    <img src="imgs/metiew.png">
+                                    <h3 class="work__title">Metiew & Smith</h3>
+                                    <p class="work__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+                                </div>
+                                <div class="works__item">
+                                    <img src="imgs/nowak.png">
+                                    <h3 class="work__title">Alex Nowak</h3>
+                                    <p class="work__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
+                                </div>
+                            </div>
+                            <button id="work__btn-right" class="slider__btn">
+                                <span class="fa fa-arrow-right"></span>
+                            </button>
+                        </div>
+                    </section>
+                    <section class="content__section about">
+                        <h2 class="about__header">We <br> believe in <br> passionate <br> people</h2>
+                        <button class="about__btn">
+                            career
                             <span class="fa fa-arrow-right"></span>
                         </button>
-                    </div>
-                </section>
-                <section class="content__section about">
-                    <h2 class="about__header">We <br> believe in <br> passionate <br> people</h2>
-                    <button class="about__btn">
-                        career
-                        <span class="fa fa-arrow-right"></span>
-                    </button>
-                    <div class="about__items">
-                        <a href="#about" class="about__box">
-                            <img src="imgs/winners.png">
-                            <h3>Winners</h3>
-                        </a>
-                        <a href="#about" class="about__box">
-                            <img src="imgs/philosophy.png">
-                            <h3>Philosophy</h3>
-                        </a>
-                        <a href="#about" class="about__box">
-                            <img src="imgs/history.png">
-                            <h3>History</h3>
-                        </a>
-                    </div>
-                </section>
-                <section class="content__section contact">
-                    <div class="contact__bg"></div>
-                    <div class="contact__info">
-                        <h2 class="visuallyhidden">Contact</h2>
-                        <p>Pawia 5,31-154 Kraków, Poland</p>
-                        <p>ouremail@gmail.com</p>
-                        <p>+48 12 628 75 60</p>
-                        <a href="#contact" class="contact__link behance">Bēhance</a>
-                        <a href="#contact" class="contact__link dribbble">Dribbble</a>
-                        <a href="#contact" class="contact__link contact">Contact us</a>
-                    </div>
-                </section>
-                <section class="content__section hire">
-                    <h2>You want us to do</h2>
-                    <div class="hire__checkboxes">
-                        <div class="hire__row">
-                            <label class="hire__checkbox-container">
-                                <input type="checkbox" class="checkbox__tohide">
-                                <span class="checkbox__checkmark">
-                                    <span class="fa fa-check"></span>
-                                </span>
-                                App Design
-                                <span class="checkbox__bg"></span>
-                            </label>
-                            <label class="hire__checkbox-container">
-                                <input type="checkbox" class="checkbox__tohide">
-                                <span class="checkbox__checkmark">
-                                    <span class="fa fa-check"></span>
-                                </span>
-                                Graphic Design
-                                <span class="checkbox__bg"></span>
-                            </label>
-                            <label class="hire__checkbox-container">
-                                <input type="checkbox" class="checkbox__tohide">
-                                <span class="checkbox__checkmark">
-                                    <span class="fa fa-check"></span>
-                                </span>
-                                Motion Design
-                                <span class="checkbox__bg"></span>
-                            </label>
+                        <div class="about__items">
+                            <a href="#about" class="about__box">
+                                <img src="imgs/winners.png">
+                                <h3>Winners</h3>
+                            </a>
+                            <a href="#about" class="about__box">
+                                <img src="imgs/philosophy.png">
+                                <h3>Philosophy</h3>
+                            </a>
+                            <a href="#about" class="about__box">
+                                <img src="imgs/history.png">
+                                <h3>History</h3>
+                            </a>
                         </div>
-                        <div class="hire__row">
-                            <label class="hire__checkbox-container">
-                                <input type="checkbox" class="checkbox__tohide">
-                                <span class="checkbox__checkmark">
-                                    <span class="fa fa-check"></span>
-                                </span>
-                                UX Design
-                                <span class="checkbox__bg"></span>
-                            </label>
-                            <label class="hire__checkbox-container">
-                                <input type="checkbox" class="checkbox__tohide">
-                                <span class="checkbox__checkmark">
-                                    <span class="fa fa-check"></span>
-                                </span>
-                                Webdesign
-                                <span class="checkbox__bg"></span>
-                            </label>
+                    </section>
+                    <section class="content__section contact">
+                        <div class="contact__bg"></div>
+                        <div class="contact__info">
+                            <h2 class="visuallyhidden">Contact</h2>
+                            <p>Pawia 5,31-154 Kraków, Poland</p>
+                            <p>ouremail@gmail.com</p>
+                            <p>+48 12 628 75 60</p>
+                            <a href="#contact" class="contact__link behance">Bēhance</a>
+                            <a href="#contact" class="contact__link dribbble">Dribbble</a>
+                            <a href="#contact" class="contact__link contact">Contact us</a>
                         </div>
-                        <div class="hire__row">
-                            <label class="hire__checkbox-container">
-                                <input type="checkbox" class="checkbox__tohide">
-                                <span class="checkbox__checkmark">
-                                    <span class="fa fa-check"></span>
-                                </span>
-                                Marketing
-                                <span class="checkbox__bg"></span>
-                            </label>
-                        </div>
-                    </div>
-                    <form class="hire__form">
-                        <div class="hire__inputs">
-                            <div class="hire__input-container">
-                                <input class="hire__input" id="name" name="name" type="text" required>
-                                <label for="name">Name</label>
+                    </section>
+                    <section class="content__section hire">
+                        <h2>You want us to do</h2>
+                        <div class="hire__checkboxes">
+                            <div class="hire__row">
+                                <label class="hire__checkbox-container">
+                                    <input type="checkbox" class="checkbox__tohide">
+                                    <span class="checkbox__checkmark">
+                                        <span class="fa fa-check"></span>
+                                    </span>
+                                    App Design
+                                    <span class="checkbox__bg"></span>
+                                </label>
+                                <label class="hire__checkbox-container">
+                                    <input type="checkbox" class="checkbox__tohide">
+                                    <span class="checkbox__checkmark">
+                                        <span class="fa fa-check"></span>
+                                    </span>
+                                    Graphic Design
+                                    <span class="checkbox__bg"></span>
+                                </label>
+                                <label class="hire__checkbox-container">
+                                    <input type="checkbox" class="checkbox__tohide">
+                                    <span class="checkbox__checkmark">
+                                        <span class="fa fa-check"></span>
+                                    </span>
+                                    Motion Design
+                                    <span class="checkbox__bg"></span>
+                                </label>
                             </div>
-                            <div class="hire__input-container">
-                                    <input class="hire__input" id="email" name="email" type="text" required>
-                                    <label for="email">Email</label>
+                            <div class="hire__row">
+                                <label class="hire__checkbox-container">
+                                    <input type="checkbox" class="checkbox__tohide">
+                                    <span class="checkbox__checkmark">
+                                        <span class="fa fa-check"></span>
+                                    </span>
+                                    UX Design
+                                    <span class="checkbox__bg"></span>
+                                </label>
+                                <label class="hire__checkbox-container">
+                                    <input type="checkbox" class="checkbox__tohide">
+                                    <span class="checkbox__checkmark">
+                                        <span class="fa fa-check"></span>
+                                    </span>
+                                    Webdesign
+                                    <span class="checkbox__bg"></span>
+                                </label>
+                            </div>
+                            <div class="hire__row">
+                                <label class="hire__checkbox-container">
+                                    <input type="checkbox" class="checkbox__tohide">
+                                    <span class="checkbox__checkmark">
+                                        <span class="fa fa-check"></span>
+                                    </span>
+                                    Marketing
+                                    <span class="checkbox__bg"></span>
+                                </label>
                             </div>
                         </div>
-                        <button class="hire__btn">Send request</button>
-                    </form>
-                </section>
+                        <form class="hire__form">
+                            <div class="hire__inputs">
+                                <div class="hire__input-container">
+                                    <input class="hire__input" id="name" name="name" type="text" required>
+                                    <label for="name">Name</label>
+                                </div>
+                                <div class="hire__input-container">
+                                        <input class="hire__input" id="email" name="email" type="text" required>
+                                        <label for="email">Email</label>
+                                </div>
+                            </div>
+                            <button class="hire__btn">Send request</button>
+                        </form>
+                    </section>
+                </div>
             </div>
-        </div>
-    </main>
+        </main>
+    </div>
 <script src="js/script.js"></script>
 </body>
 </html>
