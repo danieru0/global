@@ -66,6 +66,7 @@
         let activeContentSection = document.querySelector('.content__section.active');
         let allContentNav = document.querySelectorAll('.content__item');
         let allContentSection = document.querySelectorAll('.content__section');
+        let url = '';
         switch(direction) {
             case 'up':
                 activeContentSection.classList.remove('active');
@@ -76,6 +77,8 @@
                 }
                 allContentNav[activePage].classList.add('active');
                 allContentSection[activePage].classList.add('active');
+                url = document.querySelector(`[id="${activePage}"]`).childNodes[1].href;
+                location.hash = url.split('#')[1];
                 break;
             case 'down':
                 activeContentSection.classList.remove('active');
@@ -84,6 +87,8 @@
                 if (activePage > 4) {
                     activePage = 0;
                 }
+                url = document.querySelector(`[id="${activePage}"]`).childNodes[1].href;
+                location.hash = url.split('#')[1];
                 allContentNav[activePage].classList.add('active');
                 allContentSection[activePage].classList.add('active');
                 break;
