@@ -59,7 +59,8 @@
       -webkit-transition: 0.3s;
       -o-transition: 0.3s;
       transition: 0.3s;
-      text-decoration: none; }
+      text-decoration: none;
+      margin-left: 58px; }
     .content__header .header__hire-btn.active {
       visibility: visible;
       opacity: 1; }
@@ -608,3 +609,142 @@
       text-transform: none;
       letter-spacing: 1px;
       margin-top: 25px; }
+
+.hire {
+  height: 550px; }
+  .hire h2 {
+    font-family: "Montserrat";
+    color: #ffffff;
+    margin-bottom: 60px;
+    font-size: 28px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0;
+    margin-top: -15px; }
+  .hire__checkboxes {
+    height: 300px;
+    position: relative;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .hire__checkboxes .hire__checkbox-container {
+      width: 200px;
+      height: 54px;
+      color: #ffffff;
+      cursor: pointer;
+      display: block;
+      text-align: center;
+      font-size: 18px;
+      font-family: "Montserrat";
+      position: relative;
+      line-height: 58px;
+      font-weight: bold;
+      letter-spacing: 1px; }
+      .hire__checkboxes .hire__checkbox-container:not(:first-of-type) {
+        margin-left: 50px; }
+      .hire__checkboxes .hire__checkbox-container .checkbox__bg {
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        display: block;
+        position: absolute;
+        border: 3px solid #ffffff;
+        top: 0;
+        z-index: -1;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s; }
+      .hire__checkboxes .hire__checkbox-container .checkbox__checkmark {
+        overflow: hidden; }
+        .hire__checkboxes .hire__checkbox-container .checkbox__checkmark .fa {
+          width: 0;
+          opacity: 0;
+          -webkit-transition: 0.3s;
+          -o-transition: 0.3s;
+          transition: 0.3s; }
+      .hire__checkboxes .hire__checkbox-container .checkbox__tohide {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0; }
+        .hire__checkboxes .hire__checkbox-container .checkbox__tohide:checked ~ .checkbox__checkmark .fa {
+          width: 20px;
+          opacity: 1; }
+        .hire__checkboxes .hire__checkbox-container .checkbox__tohide:checked ~ .checkbox__bg {
+          border: 3px solid #0f33ff;
+          background: #0f33ff; }
+  .hire__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 40px; }
+  .hire__form {
+    margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .hire__form .hire__inputs {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .hire__form .hire__inputs .hire__input-container {
+        position: relative; }
+        .hire__form .hire__inputs .hire__input-container:not(:first-of-type) {
+          margin-left: 60px; }
+        .hire__form .hire__inputs .hire__input-container .hire__input {
+          width: 316px;
+          height: 40px;
+          background: transparent;
+          border: none;
+          border-bottom: 1px solid #efefef;
+          outline: none;
+          color: #efefef;
+          font-size: 26px;
+          font-family: "Montserrat"; }
+          .hire__form .hire__inputs .hire__input-container .hire__input:valid + label,
+          .hire__form .hire__inputs .hire__input-container .hire__input:focus + label {
+            font-size: 18px;
+            top: -10px; }
+        .hire__form .hire__inputs .hire__input-container label {
+          position: absolute;
+          color: #efefef;
+          font-family: "Montserrat";
+          font-size: 26px;
+          left: 0;
+          top: 0;
+          -webkit-transition: 0.3s;
+          -o-transition: 0.3s;
+          transition: 0.3s;
+          cursor: text; }
+    .hire__form .hire__btn {
+      width: 400px;
+      height: 51px;
+      border: none;
+      background: #0f33ff;
+      font-family: "Montserrat";
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #ffffff;
+      font-size: 15px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      margin-top: 60px; }
