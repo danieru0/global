@@ -6,6 +6,7 @@
 }
 
 .perspective.active {
+    overflow: hidden;
     .navbar {
         height: auto;
         font-family: $font-mont;
@@ -23,6 +24,7 @@
             height: 50px;
             position: absolute;
             top: 0;
+            left: 0;
             display: flex;
             justify-content: space-between;
 
