@@ -143,31 +143,39 @@
         }
     });
 
+    function perspectiveMenuToggle(decision) {
+        switch(decision) {
+            case 'show':
+                perspective.classList.add('active');
+                main.classList.add('active');
+                setTimeout(() => {
+                    navActive = true;
+                }, 300); 
+                break;
+            case 'close':
+                main.classList.remove('active');
+                setTimeout(() => {
+                    perspective.classList.remove('active');
+                    navActive = false;
+                }, 300);
+                break;
+            default: break;
+        }
+    }
+
     navBtn.addEventListener('click', () => {
-        perspective.classList.add('active');
-        main.classList.add('active');
-        setTimeout(() => {
-            navActive = true;
-        }, 300);
+        perspectiveMenuToggle('show');
     });
 
     navCloseBtn.addEventListener('click', () => {
         if (navActive) {
-            main.classList.remove('active');
-            setTimeout(() => {
-                perspective.classList.remove('active');
-                navActive = false;
-            }, 300);
+            perspectiveMenuToggle('close');
         }
     })
 
     main.addEventListener('click', () => {
         if (navActive) {
-            main.classList.remove('active');
-            setTimeout(() => {
-                perspective.classList.remove('active');
-                navActive = false;
-            }, 300);
+            perspectiveMenuToggle('close');
         }
     });
 })();

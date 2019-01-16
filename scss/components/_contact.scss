@@ -98,3 +98,12 @@
         }
     }
 }
+
+@media (max-width: 430px) {
+    .contact {
+        justify-content: center;
+        .contact__info {
+            margin: 0;
+        }
+    }
+}

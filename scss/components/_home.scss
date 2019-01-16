@@ -30,17 +30,17 @@
             color: $white;
             font-family: $font-mont;
             font-weight: bold;
-            display: flex;
-            align-items: center;
             text-transform: uppercase;
             cursor: pointer;
             margin-bottom: 90px;
             outline: none;
+            position: relative;
 
             p {
                 margin: 0;
                 position: absolute;
                 left: -14px;
+                top: 6.56px;
                 font-size: 14px;
                 transition: 0.5s;
             }
@@ -132,6 +132,26 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        //padding-bottom: 80px;
+    }
+}
+
+@media (max-width: 515px) {
+    .home {
+        h2 {
+            width: auto;
+        }
+        .home__tabs {
+            .tab:nth-child(3) {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 414px) {
+    .home {
+        h2 {
+            font-size: 50px;
+        }
     }
 }

@@ -53,7 +53,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        z-index: 2;
+        z-index: 3;
         position: relative;
 
         .header__hire-btn {
@@ -126,7 +126,7 @@
         left: 0;
         display: flex;
         align-items: center;
-        z-index: 1;
+        z-index: 2;
 
         ul {
             padding: 0;
@@ -226,6 +226,12 @@
 
 @media (max-width: 1170px) {
     .content {
+
+        .header__hire-btn {
+            margin: 0;
+            margin-right: 75px;
+        }
+
         .wrapper {
             width: auto;
             margin: 0;
@@ -238,6 +244,9 @@
 }
 
 @media (max-width: 800px) {
+    .header__hire-btn {
+        margin: 0;
+    }
     .content__nav {
         display: none;
     }
@@ -263,5 +272,23 @@
             width: 100%;
             margin: 0 !important;
         }
+    }
+}
+
+@media (max-width: 640px) {
+    .content {
+        height: 3700px;
+    }
+}
+
+@media (max-width: 443px) {
+    .content {
+        height: 3850px;
+    }
+}
+
+@media (max-width: 436px) {
+    .content {
+        height: 4000px;
     }
 }

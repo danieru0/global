@@ -148,10 +148,13 @@
     }
 }
 
-@media (max-width: 864px) {
+@media (max-width: 1170px) {
     .content__section.hire {
         left: 0px;
     }
+}   
+
+@media (max-width: 864px) {
     .hire {
         .hire__checkboxes {
             height: auto;
@@ -193,6 +196,30 @@
             .hire__inputs {
                 .hire__input-container {
                     margin-top: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 436px) {
+    .hire {
+        height: auto;
+
+        .hire__btn {
+            width: 300px;
+        }
+    }
+}
+
+@media (max-width: 332px) {
+    .hire {
+        .hire__form {
+            .hire__inputs {
+                .hire__input-container {
+                    .hire__input {
+                        width: 300px;
+                    }
                 }
             }
         }

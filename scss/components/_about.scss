@@ -43,7 +43,6 @@
         text-transform: uppercase;
         font-size: 15px;
         font-weight: bold;
-        display: flex;
         align-items: center;
         cursor: pointer;
         letter-spacing: 1px;
@@ -57,7 +56,7 @@
         }
 
         span {
-            margin-left: 15px;
+            margin-left: 8px;
         }
     }
 
@@ -149,5 +148,44 @@
 @media (max-width: 800px) {
     .content__section.about {
         width: 90%;
+    }
+}
+
+@media (max-width: 640px) {
+    .about {
+        height: 700px;
+        .about__items {
+            flex-wrap: wrap;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 438px) {
+    .about {
+        height: 800px;
+
+        .about__header {
+            width: auto;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 414px) {
+    .about {
+        .about__header {
+            font-size: 50px;
+
+            &:after {
+                display: none;
+            }
+        }
     }
 }
