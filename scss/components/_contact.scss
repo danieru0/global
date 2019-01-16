@@ -79,3 +79,22 @@
         }
     }
 }
+
+@media (max-width: 800px) {
+    .content__section.contact {
+        top: -50px;
+    }
+    .contact {
+        background: url('imgs/contact.png') no-repeat;
+        background-size: cover;
+        background-position: 60%;
+        height: 800px;
+        .contact__bg {
+            display: none;
+        }
+
+        .contact__info {
+            margin-right: 50px;
+        }
+    }
+}

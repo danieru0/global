@@ -237,4 +237,31 @@
     }
 }
 
-//825px
+@media (max-width: 800px) {
+    .content__nav {
+        display: none;
+    }
+
+    .content {
+        height: 3500px;
+        .wrapper {
+            height: 100%;
+            .content__container {
+                height: 100%;
+            }
+        }
+    }
+
+    .content__container {
+        flex-direction: column;
+        background: $content-bg;
+        .content__section {
+            position: relative;
+            visibility: visible;
+            opacity: 1;
+            left: 0;
+            width: 100%;
+            margin: 0 !important;
+        }
+    }
+}

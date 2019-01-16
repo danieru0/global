@@ -145,3 +145,9 @@
         }
     }
 }
+
+@media (max-width: 800px) {
+    .content__section.about {
+        width: 90%;
+    }
+}

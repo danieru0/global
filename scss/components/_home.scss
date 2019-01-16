@@ -121,3 +121,17 @@
         width: auto;
     }
 }
+
+@media (max-width: 800px) {
+    .content__section.home {
+        width: 90%;
+    }
+    .home {
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        //padding-bottom: 80px;
+    }
+}
