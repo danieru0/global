@@ -184,4 +184,28 @@
             perspectiveMenuToggle('close');
         }
     });
+
+    //smooth scroll
+
+    document.querySelectorAll('.mobile__link a[href^="#"').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            let distanceToTop = el => Math.floor(el.getBoundingClientRect().top);
+            let linkedSection = document.getElementById(link.getAttribute('href').substring(1));
+            let sectionPosition = distanceToTop(linkedSection);
+
+            window.scrollBy({ top: sectionPosition, left: 0, behavior: 'smooth' });
+
+            let checkIfDone = setInterval(() => {
+                let atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
+                if (distanceToTop(linkedSection) === 0 || atBottom) {
+                    linkedSection.tabIndex = '-1';
+                    linkedSection.focus();
+                    location.hash = link.getAttribute('href').substring(1);
+                    clearInterval(checkIfDone);
+                }
+            }, 100);
+        });
+    });
+
 })();
