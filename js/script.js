@@ -12,6 +12,7 @@
     let main = document.getElementById('main');
     let navActive = false;
     let navCloseBtn = document.getElementById('nav-close');
+    let mobileNav = document.getElementById('nav-mobile');
 
     function hashSectionChange() {
         if (document.querySelector('.content__section.active')) {
@@ -164,7 +165,12 @@
     }
 
     navBtn.addEventListener('click', () => {
-        perspectiveMenuToggle('show');
+        let sectionPositionStyle = getComputedStyle(document.querySelectorAll('.content__section')[0]).getPropertyValue('position');
+        if (sectionPositionStyle == 'absolute') {
+            perspectiveMenuToggle('show');
+        } else {
+            mobileNav.classList.toggle('active');
+        }
     });
 
     navCloseBtn.addEventListener('click', () => {

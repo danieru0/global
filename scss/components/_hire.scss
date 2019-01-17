@@ -186,6 +186,7 @@
 
 @media (max-width: 800px) {
     .hire {
+        height: auto;
         .hire__row {
             .hire__checkbox-container {
                 margin-left: 5px;
@@ -204,8 +205,6 @@
 
 @media (max-width: 436px) {
     .hire {
-        height: auto;
-
         .hire__btn {
             width: 300px;
         }

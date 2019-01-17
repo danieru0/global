@@ -14,6 +14,7 @@
     perspective: 1500px;
     background: $content-bg;
     height: 100vh;
+    overflow: visible !important;
 }
 
 .content.active {
@@ -46,6 +47,40 @@
         height: 100vh;
         position: relative;
     }
+
+    .nav-mobile {
+        width: 100%;
+        position: fixed;
+        top: 65px;
+        height: 0px;
+        overflow: hidden;
+        background: #000000;
+        transition: 0.3s;
+        left: 0;
+        z-index: 2;
+        ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            top: 15px;
+            
+            .mobile__link {
+                a {
+                    text-decoration: none;
+                    color: $white;
+                    font-family: $font-mont;
+                    font-size: 24px;
+                    line-height: 40px;
+                }
+            }
+        }
+    } 
 
     &__header {
         width: 100%;
@@ -227,9 +262,13 @@
 @media (max-width: 1170px) {
     .content {
 
+        .content__header {
+            justify-content: space-around;
+        }
+
         .header__hire-btn {
             margin: 0;
-            margin-right: 75px;
+            margin-right: 92px;
         }
 
         .wrapper {
@@ -242,11 +281,24 @@
         }
     }
 }
-
 @media (max-width: 800px) {
-    .header__hire-btn {
-        margin: 0;
+    .perspective.active {
+        perspective: none;
     }
+
+    .content.active {
+        transform: none;
+        border: none;
+    }
+    
+    .content__header {
+        position: fixed;
+        background: #000000;
+        .header__hire-btn {
+            display: none;
+        }
+    }
+
     .content__nav {
         display: none;
     }
@@ -255,6 +307,11 @@
         height: 3500px;
         .wrapper {
             height: 100%;
+            .nav-mobile.active {
+                height: 250px;
+                transition: 0.3s;
+            }
+
             .content__container {
                 height: 100%;
             }
@@ -273,6 +330,8 @@
             margin: 0 !important;
         }
     }
+
+
 }
 
 @media (max-width: 640px) {
