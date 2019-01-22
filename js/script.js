@@ -199,8 +199,6 @@
             let checkIfDone = setInterval(() => {
                 let atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
                 if (distanceToTop(linkedSection) === 0 || atBottom) {
-                    linkedSection.tabIndex = '-1';
-                    linkedSection.focus();
                     location.hash = link.getAttribute('href').substring(1);
                     clearInterval(checkIfDone);
                 }
